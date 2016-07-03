@@ -21,8 +21,8 @@ Der Datensatz befindet sich im Ordner Implementierung/datensatz. Darin befindet 
 * remove TODOs
 
 # Authors
-Simon Maximilian Fraiss: e1425602@student.tuwien.ac.at
-Patrick Hromniak: e1425731@student.tuwien.ac.at
-Michael Pointner: e1427791@student.tuwien.ac.at
-Simon Reisinger: e1426220@student.tuwien.ac.at
-Mohammad Zandpour: e1425603@student.tuwien.ac.at
+* Simon Maximilian Fraiss: e1425602@student.tuwien.ac.at
+* Patrick Hromniak: e1425731@student.tuwien.ac.at
+* Michael Pointner: e1427791@student.tuwien.ac.at
+* Simon Reisinger: e1426220@student.tuwien.ac.at
+* Mohammad Zandpour: e1425603@student.tuwien.ac.at
