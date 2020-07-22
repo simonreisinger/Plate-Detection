@@ -14,8 +14,6 @@ function result = plateCR( imageTransformed )
     %%%%%%%%%%% OCR OCTAVE %%%%%%%%%%%%%%%%%%%%
     % TODO edit here
     %%%%%%%%%%% OCR OCTAVE %%%%%%%%%%%%%%%%%%%%
-
-
     %sortiere nach confidence level gefundener symbole absteigend fuer
     %schleifeneffizienz
     [sortedConf, ~] = sort(results.CharacterConfidences, 'descend');
