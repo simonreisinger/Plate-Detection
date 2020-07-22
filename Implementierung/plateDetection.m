@@ -3,16 +3,16 @@ Aufruf der Funktion via Kommando plateDetection('filename.png');
 Es gibt zwei OPTIONALE Parameter:
 ownCanny: Gibt an, ob Simons Canny-Filter statt dem von Matlab verwendet
 werden soll. Default-Wert: true
-colorCheck: Gibt an, ob Patricks Farbprüfung aktiviert werden
+colorCheck: Gibt an, ob Patricks Farbpruefung aktiviert werden
 soll. Default-Wert: false
-debugFlag: Wenn true, werden zusätzliche Debug-Informationen angezeigt
-(Algorithmus kann dadurch länger dauern, da für alle viereckigen Objekte
-alle restlichen Prüfungen durchgeführt werden). Default-Wert: false
+debugFlag: Wenn true, werden zusaetzliche Debug-Informationen angezeigt
+(Algorithmus kann dadurch laenger dauern, da fuer alle viereckigen Objekte
+alle restlichen Pruefungen durchgefuehrt werden). Default-Wert: false
 
-Autoren: Hauptsächlich Reisinger und Pointner, Ergänzungen durch alle
+Autoren: Hauptsaechlich Reisinger und Pointner, Ergaenzungen durch alle
 Mitglieder
 %}
-function imgOutput = plateDetection(filename, ownCanny, colorCheck, debugFlag) 
+function imgOutput = plateDetection(filename, ownCanny, colorCheck, debugFlag)
 
     if ~exist('debugFlag')
         debugFlag = false;
@@ -82,7 +82,7 @@ function imgOutput = plateDetection(filename, ownCanny, colorCheck, debugFlag)
                 else
                     val = 1;
                 end
-                if(debugFlag || val > 0) 
+                if(debugFlag || val > 0)
 
                     % Geometric Transformation
                     p = round(result .* resizeFactor);
@@ -91,7 +91,7 @@ function imgOutput = plateDetection(filename, ownCanny, colorCheck, debugFlag)
                     if(debugFlag || euroTestPassed == true)
                         plateCRpassed = plateCR(imageTransformed);
                         if(debugFlag || plateCR(imageTransformed))
-                            
+
                             if(debugFlag)
                                 text_str = cell(3,1);
                                 box_color = {'green','green','green'};
@@ -105,7 +105,7 @@ function imgOutput = plateDetection(filename, ownCanny, colorCheck, debugFlag)
                                 position = [1 1;1 30;1 60];
                                 imageTransformed = insertText(imageTransformed,position,text_str,'FontSize',18,'BoxColor',box_color,'BoxOpacity',0.4,'TextColor','black');
                             end
-                            
+
                             % Speichern der transformierten Marker
                             marker = round(marker ./ resizeFactor);
                             mSize = size(marker);
@@ -122,9 +122,9 @@ function imgOutput = plateDetection(filename, ownCanny, colorCheck, debugFlag)
             end
         end
     end
-    
+
     if(debugFlag)
-        
+
         areasSize = [size(newMatrix, 1), size(newMatrix, 2), size(newMatrix, 3)];
         areas = zeros(areasSize(1), areasSize(2));
 
@@ -144,8 +144,8 @@ function imgOutput = plateDetection(filename, ownCanny, colorCheck, debugFlag)
 
         imgOutput(1:cannySize(1), outputSize(2)+1+2*bd+plateSize(2):outputSize(2)+cannySize(2)+plateSize(2)+2*bd, 1:3) = canny(:,:,:);
     end
-    
+
     if(outputMarkerCount > 0)
-        imgOutput = insertMarker(imgOutput, outputMarker, 'x', 'color', 'red', 'size', 10); 
+        imgOutput = insertMarker(imgOutput, outputMarker, 'x', 'color', 'red', 'size', 10);
     end
 end

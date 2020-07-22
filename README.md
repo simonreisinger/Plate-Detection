@@ -11,7 +11,13 @@ Zum Testen des Datensatzes oder mehrerer Bilder gibt es auch die Datei testPlate
 
 Der Datensatz befindet sich im Ordner Implementierung/datensatz. Darin befindet sich ein Ordner tested, welcher die Ausgabebilder für alle Bilder des Datensatzes enthält.
 
+# Packages Needed
+* image
+* signal
+* ocr (not in octave)
+
 ## TODOs
+* Run in Octave (running OCR in OCTAVE)
 * replace finding areas with ccl
 * adding gui
 * change all comments to english

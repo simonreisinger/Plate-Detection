@@ -1,14 +1,21 @@
 %AUTHOR: Mohammad Zanpdour
 %
-%Führt die Buchstabenprüfung durch.
+%Faehrt die Buchstabenpruefung durch.
 %bekommt RGB bild mit rotiertem Kennzeichen, liefert TRUE wenn es ein nummernschild sein kann, false
 %wenn es kein nummernschild sein kann.
 function result = plateCR( imageTransformed )
     %graustufenbild
     I = rgb2gray(imageTransformed);
     %OCR aus vorhandenen funktionen
+    %%%%%%%%%%% OCR in MATLAB only %%%%%%%%%%%%%%%%%%%%
     results = ocr(I, 'CharacterSet', ...
         '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'TextLayout','Block');
+    %%%%%%%%%%% OCR in MATLAB only %%%%%%%%%%%%%%%%%%%%
+    %%%%%%%%%%% OCR OCTAVE %%%%%%%%%%%%%%%%%%%%
+    % TODO edit here
+    %%%%%%%%%%% OCR OCTAVE %%%%%%%%%%%%%%%%%%%%
+
+
     %sortiere nach confidence level gefundener symbole absteigend fuer
     %schleifeneffizienz
     [sortedConf, ~] = sort(results.CharacterConfidences, 'descend');
@@ -38,9 +45,9 @@ function result = plateCR( imageTransformed )
     end
     result = false;
     %{
-    
+
     %dashier einfach ignorieren, brauchen wir vllt noch
-    
+
     topTenIndexes = indexesNaNsRemoved; %indexesNaNsRemoved(1:10);
     digits = num2cell(results.Text(topTenIndexes));
     bboxes = results.CharacterBoundingBoxes(topTenIndexes, :);
