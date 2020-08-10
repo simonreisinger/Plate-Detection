@@ -26,6 +26,9 @@ Der Datensatz befindet sich im Ordner Implementierung/datensatz. Darin befindet 
 * reorder some functions to one class
 * remove TODOs
 
+## Acknowledgment
+This project was created for the course [Introduction to image processing](https://www.prip.tuwien.ac.at/teaching/edbv_ue.php) at the [TU Wien](https://www.prip.tuwien.at).
+
 # Authors
 * Simon Maximilian Fraiss: https://www.linkedin.com/in/simon-maximilian-fraiss/
 * Patrick Hromniak: https://www.hromniak.at/
