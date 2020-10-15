@@ -17,7 +17,7 @@ Der Datensatz befindet sich im Ordner Implementierung/datensatz. Darin befindet 
 * ocr (not in octave)
 
 ## TODOs
-* Run in Octave (implementing OCR in OCTAVE)
+* Run in Octave (implementing [OCR in OCTAVE](https://github.com/baumanta/OCR_octave))
 * replace finding areas with ccl
 * adding gui
 * change all comments to english
