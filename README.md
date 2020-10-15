@@ -1,6 +1,6 @@
 # Plate Dectection
 ## How to run the program
-Erst ab Matlab Version 2014b (OCR)
+Erst ab Matlab Version 2014b (OCR needed)
 Um den Algorithmus für ein einzelnes Bild zu testen ruft man einfach
 plateDetection(filename)
 auf. Die Methode gibt das Ergebnisbild zurück, um es anzuzeigen, ist also ein weiteres imshow nötig.
@@ -17,7 +17,7 @@ Der Datensatz befindet sich im Ordner Implementierung/datensatz. Darin befindet 
 * ocr (not in octave)
 
 ## TODOs
-* Run in Octave (running OCR in OCTAVE)
+* Run in Octave (implementing OCR in OCTAVE)
 * replace finding areas with ccl
 * adding gui
 * change all comments to english
